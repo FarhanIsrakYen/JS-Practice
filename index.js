@@ -259,3 +259,51 @@
 // console.log(maxNum);
 // console.log(minNum);
 
+// --------------------------------------------- objects 
+
+// const person = {
+//     firstName: "Farhan",
+//     lastName: "Israk",
+//     age: 28,
+//     isEmployed: true,
+//     sayHello: () => console.log("Hello!")
+// }
+
+// console.log(person);
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.age);
+// console.log(person.isEmployed);
+// person.sayHello();
+
+// --------------------------------------------- this keyword
+ // this keyword doesn't work with arrow function
+// const person = {
+//     firstName: "Farhan",
+//     lastName: "Israk",
+//     age: 28,
+//     isEmployed: true,
+//     sayHello: function() { console.log(`Hey! I'm ${this.firstName}`);}
+// }
+
+// person.sayHello();
+
+// --------------------------------------------- constructor
+
+class Car {
+    constructor(make, model, year, color) {
+        this.make = make,
+            this.model = model,
+            this.year = year,
+            this.color = color;
+    }
+}
+
+const car1 = new Car("Ford", "Mustang", 2024, "red");
+const car2 = new Car("Chevrolet", "Camaro", 2025, "blue");
+
+console.log(car1);
+console.log(car2);
+console.log(car1.make);
+console.log(car2.make);
+console.log(car2.make);
