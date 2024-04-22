@@ -290,20 +290,68 @@
 
 // --------------------------------------------- constructor
 
-class Car {
-    constructor(make, model, year, color) {
-        this.make = make,
-            this.model = model,
-            this.year = year,
-            this.color = color;
-    }
-}
+// class Car {
+//     constructor(make, model, year, color) {
+//         this.make = make,
+//         this.model = model,
+//         this.year = year,
+//         this.color = color;
+//     }
+// }
 
-const car1 = new Car("Ford", "Mustang", 2024, "red");
-const car2 = new Car("Chevrolet", "Camaro", 2025, "blue");
+// const car1 = new Car("Ford", "Mustang", 2024, "red");
+// const car2 = new Car("Chevrolet", "Camaro", 2025, "blue");
 
-console.log(car1);
-console.log(car2);
-console.log(car1.make);
-console.log(car2.make);
-console.log(car2.make);
+// console.log(car1);
+// console.log(car2);
+// console.log(car1.make);
+// console.log(car2.make);
+// console.log(car2.make);
+
+
+// --------------------------------------------- class
+
+// class Product {
+//     constructor(name, price) {
+//         this.name = name;
+//         this.price = price;
+//     }
+
+//     displayProduct() {
+//         console.log(`Product: ${this.name}`);
+//         console.log(`Price: ${this.price.toFixed(2)}`);
+//     }
+
+//     calculateTotal(salesTax) {
+//         return this.price + (this.price * salesTax);
+//     }
+// }
+
+// const salesTax = -.05;
+
+// const product1 = new Product("Shirt", 19.99);
+// const product2 = new Product("Pants", 19.99);
+// const product3 = new Product("Underwear", 100.00012213);
+
+// product1.displayProduct();
+// product2.displayProduct();
+// product3.displayProduct();
+
+// const total = product1.calculateTotal(salesTax);
+// console.log(`Total: ${total.toFixed(2)}`);
+
+// --------------------------------------------- static
+
+// class MathUtil{
+//     static PI = 3.14159;
+//     static getDiameter(radius) {
+//         return radius * 2;
+//     }
+//     static getCircumference(radius) {
+//         return 2* this.PI * radius;
+//     }
+// }
+
+// console.log(MathUtil.PI);
+// console.log(MathUtil.getDiameter(2));
+// console.log(MathUtil.getCircumference(2));
