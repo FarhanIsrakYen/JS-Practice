@@ -528,18 +528,47 @@
 
 // swap the value of two variables
 
-let a = 1;
-let b = 2;
+// let a = 1;
+// let b = 2;
 
-[a, b] = [b, a];
+// [a, b] = [b, a];
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
 // swap 2 elements om an array
 
-const colors = ['red', 'green', 'blue', 'yellow', 'white'];
+// const colors = ['red', 'green', 'blue', 'yellow', 'white'];
 
-[colors[0], colors[4]] = [colors[4], colors[0]];
+// [colors[0], colors[4]] = [colors[4], colors[0]];
 
-console.log(colors);
+// console.log(colors);
+
+// extract value from object & destructure in function params
+
+function displayPerson({firstName, lastName, age, job="unemployed"}) {
+    console.log(`name: ${firstName} ${lastName}`);
+    console.log(`age: ${age}`);
+    console.log(`job: ${job}`);
+}
+
+const person1 = {
+    firstName: "TestFirstName1",
+    lastName: "TestLastName1",
+    age: 30,
+    job: "Test1"
+}
+
+const person2 = {
+    firstName: "TestFirstName2",
+    lastName: "TestLastName2",
+    age: 20,
+}
+
+const {firstName, lastName, age, job="unemployed"} = person1;
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(job);
+
+displayPerson(person2);
