@@ -546,29 +546,143 @@
 
 // extract value from object & destructure in function params
 
-function displayPerson({firstName, lastName, age, job="unemployed"}) {
-    console.log(`name: ${firstName} ${lastName}`);
-    console.log(`age: ${age}`);
-    console.log(`job: ${job}`);
-}
+// function displayPerson({firstName, lastName, age, job="unemployed"}) {
+//     console.log(`name: ${firstName} ${lastName}`);
+//     console.log(`age: ${age}`);
+//     console.log(`job: ${job}`);
+// }
 
-const person1 = {
-    firstName: "TestFirstName1",
-    lastName: "TestLastName1",
-    age: 30,
-    job: "Test1"
-}
+// const person1 = {
+//     firstName: "TestFirstName1",
+//     lastName: "TestLastName1",
+//     age: 30,
+//     job: "Test1"
+// }
 
-const person2 = {
-    firstName: "TestFirstName2",
-    lastName: "TestLastName2",
-    age: 20,
-}
+// const person2 = {
+//     firstName: "TestFirstName2",
+//     lastName: "TestLastName2",
+//     age: 20,
+// }
 
-const {firstName, lastName, age, job="unemployed"} = person1;
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(job);
+// const {firstName, lastName, age, job="unemployed"} = person1;
+// console.log(firstName);
+// console.log(lastName);
+// console.log(age);
+// console.log(job);
 
-displayPerson(person2);
+// displayPerson(person2);
+
+// --------------------------------------------- nested object
+
+// const person = {
+//     fullName: "Sponge Bob",
+//     age: 30,
+//     isStudent: true,
+//     hobbies: ["Karate", "fishing"],
+//     address: {
+//         country: "Bangladesh",
+//         city: "Dhaka",
+//         location: "Old Dhaka"
+//     }
+// }
+
+// console.log(person);
+// console.log(person.age);
+// console.log(person.isStudent);
+// console.log(person.hobbies);
+// console.log(person.address);
+// console.log(person.address.country);
+// console.log(person.address.city);
+// console.log(person.address.location);
+
+// class Address {
+//     constructor(street,city,country) {
+//         this.street = street;
+//         this.city = city;
+//         this.country = country;
+//     }
+// }
+
+// class Person {
+//     constructor(name, age, ...address) {
+//         this.name = name;
+//         this.age = age;
+//         this.address = new Address(...address);
+//     }
+// }
+
+// const person1 = new Person("Hello", 30, "Old Dhaka", "Dhaka", "Bangladesh");
+// const person3 = new Person("World", 20, "Old Dhaka - 1", "Dhaka North", "Bangladesh");
+// const person2 = new Person("Hi", 10, "Old Dhaka - 2", "Dhaka South", "Bangladesh");
+
+// console.log(person1.address.street);
+// console.log(person3.address.street);
+// console.log(person2.address.street);
+
+// --------------------------------------------- array of object
+
+// const fruits = [
+//     {name: "apple", color:"red", calories: 95},
+//     {name: "orange", color:"orange", calories: 45},
+//     {name: "banana", color:"yellow", calories: 105},
+// ]
+
+// console.log(fruits[0].name);
+
+// fruits.push({name: "grapes", color:"purple", calories: 50});
+// console.log(fruits);
+
+// fruits.pop()
+
+// fruits.splice(1,2);
+
+// console.log(fruits);
+
+// fruits.forEach(fruit => console.log(fruit.name));
+
+// const fruitNames = fruits.map(fruit => fruit.name);
+
+// console.log(fruitNames);
+
+// const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+// const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
+// const highCalFruits = fruits.filter(fruit => fruit.calories > 100);
+
+// console.log(yellowFruits);
+// console.log(lowCalFruits);
+// console.log(highCalFruits);
+
+
+// const maxFruit = fruits.reduce((max, fruit) => fruit.calories > max.calories ? fruit : max);
+
+// console.log(maxFruit);
+
+// --------------------------------------------- sort
+
+// let numbers = [1, 10, 2, 3, 4, 5, 9, 7, 8, 6];
+
+// numbers.sort();
+
+// console.log(numbers);
+
+// numbers.sort((a,b) => a-b);
+
+// console.log(numbers);
+
+// numbers.sort((a,b) => b-a);
+// console.log(numbers);
+
+const people = [
+    {name: "test1", age: 30, gpa: 3.0},
+    {name: "test2", age: 20, gpa: 3.5},
+    {name: "test3", age: 70, gpa: 3.2},
+    {name: "test4", age: 10, gpa: 3.8},
+]
+
+people.sort((a, b) => a.gpa - b.gpa);
+console.log(people);
+
+people.sort((a, b) => a.name.localeCompare(a.name));
+
+console.log(people);
