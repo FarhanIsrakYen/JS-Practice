@@ -672,17 +672,109 @@
 
 // numbers.sort((a,b) => b-a);
 // console.log(numbers);
+// const people = [
+//     {name: "test1", age: 30, gpa: 3.0},
+//     {name: "test2", age: 20, gpa: 3.5},
+//     {name: "test3", age: 70, gpa: 3.2},
+//     {name: "test4", age: 10, gpa: 3.8},
+// ]
 
-const people = [
-    {name: "test1", age: 30, gpa: 3.0},
-    {name: "test2", age: 20, gpa: 3.5},
-    {name: "test3", age: 70, gpa: 3.2},
-    {name: "test4", age: 10, gpa: 3.8},
-]
+// people.sort((a, b) => a.gpa - b.gpa);
+// console.log(people);
 
-people.sort((a, b) => a.gpa - b.gpa);
-console.log(people);
+// people.sort((a, b) => a.name.localeCompare(a.name));
 
-people.sort((a, b) => a.name.localeCompare(a.name));
+// console.log(people);
 
-console.log(people);
+// --------------------------------------------- date
+
+// Date(year, m, d, h, min, s, ms)
+// const date = new Date("2024-01-02T12:00:00Z");
+// const date = new Date(1714417641000);
+// const date = new Date();
+
+// const year = date.getFullYear();
+// const month = date.getMonth();
+
+// console.log(year);
+// console.log(month);
+
+// date.setFullYear(2020);
+// date.setMonth(2);
+// date.setDate(1);
+// date.setHours(3);
+// date.setSeconds(4);
+
+// console.log(date);
+
+// const date1 = new Date("2023-12-31");
+// const date2 = new Date("2023-12-30");
+// if (date2 > date1) {
+//     console.log("Happy New Year!");
+// } else {
+//     console.log("Wait!");
+// }
+
+// --------------------------------------------- closure
+
+// function outer() {
+//     let message = "Hello"; // helps to make variable private
+//     function inner() {
+//     console.log(message);
+//     }
+//     inner();
+// }
+
+// outer();
+
+// function createCounter() {
+
+//     let count = 0;
+
+//     function increment() {        
+//         count++;
+//         console.log(`Count increased to ${count}`);
+//     }
+
+//     function getCount() {
+//         return count;
+//     }
+
+//     return {increment, getCount}; // returning object
+// }
+
+// const counter = createCounter();
+// counter.increment();
+// counter.increment();
+// counter.increment();
+
+// console.log(`Current count is ${counter.getCount()}`);
+
+// function createGame() {
+//     let score = 0;
+
+//     function increaseScore(points) {
+//         score += points;
+//         console.log(`+${points}pts`);
+//     }
+
+//     function decreaseScore(points) {
+//         score-= points;
+//         console.log(`-${points}pts`);
+//     }
+
+//     function getScore() {
+//         return score;
+//     }
+
+//     return {increaseScore, decreaseScore, getScore};
+// }
+
+// const game = createGame();
+
+// game.increaseScore(5);
+// game.increaseScore(10);
+// game.decreaseScore(3);
+// game.decreaseScore(2);
+
+// console.log(`The final score is ${game.getScore()}`);
