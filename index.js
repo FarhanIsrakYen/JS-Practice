@@ -778,3 +778,29 @@
 // game.decreaseScore(2);
 
 // console.log(`The final score is ${game.getScore()}`);
+
+// --------------------------------------------- setTimeout
+
+// setTimeout(function() {
+//     window.alert("Hello")
+// },3000);
+
+// setTimeout(()=> window.alert("Hello"),3000);
+
+// clearTimeout(timeoutId) to cancel a timeout
+
+// const timeoutId = setTimeout(()=> window.alert("Hello"),3000);
+
+// clearTimeout(timeoutId);
+
+let timeoutId;
+
+function startTimer() {
+    timeoutId = setTimeout(()=> window.alert("Hello"), 3000);
+    console.log("Started");
+}
+
+function clearTimer() {
+    clearTimeout(timeoutId);
+    console.log("Cleared");
+}
