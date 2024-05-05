@@ -793,12 +793,12 @@
 
 // clearTimeout(timeoutId);
 
-let timeoutId;
+// let timeoutId;
 
-function startTimer() {
-    timeoutId = setTimeout(()=> window.alert("Hello"), 3000);
-    console.log("Started");
-}
+// function startTimer() {
+//     timeoutId = setTimeout(()=> window.alert("Hello"), 3000);
+//     console.log("Started");
+// }
 
 function clearTimer() {
     clearTimeout(timeoutId);
